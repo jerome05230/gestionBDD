@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'dialoglogin.ui'
 **
-** Created by: Qt User Interface Compiler version 4.8.6
+** Created by: Qt User Interface Compiler version 5.6.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -10,17 +10,17 @@
 #define UI_DIALOGLOGIN_H
 
 #include <QtCore/QVariant>
-#include <QtGui/QAction>
-#include <QtGui/QApplication>
-#include <QtGui/QButtonGroup>
-#include <QtGui/QDialog>
-#include <QtGui/QFormLayout>
-#include <QtGui/QHBoxLayout>
-#include <QtGui/QHeaderView>
-#include <QtGui/QLabel>
-#include <QtGui/QLineEdit>
-#include <QtGui/QPushButton>
-#include <QtGui/QVBoxLayout>
+#include <QtWidgets/QAction>
+#include <QtWidgets/QApplication>
+#include <QtWidgets/QButtonGroup>
+#include <QtWidgets/QDialog>
+#include <QtWidgets/QFormLayout>
+#include <QtWidgets/QHBoxLayout>
+#include <QtWidgets/QHeaderView>
+#include <QtWidgets/QLabel>
+#include <QtWidgets/QLineEdit>
+#include <QtWidgets/QPushButton>
+#include <QtWidgets/QVBoxLayout>
 
 QT_BEGIN_NAMESPACE
 
@@ -42,65 +42,65 @@ public:
     void setupUi(QDialog *DialogLogin)
     {
         if (DialogLogin->objectName().isEmpty())
-            DialogLogin->setObjectName(QString::fromUtf8("DialogLogin"));
-        DialogLogin->resize(436, 252);
+            DialogLogin->setObjectName(QStringLiteral("DialogLogin"));
+        DialogLogin->resize(209, 123);
         QIcon icon;
-        icon.addFile(QString::fromUtf8(":/icones/icones/gestionBDD.png"), QSize(), QIcon::Normal, QIcon::Off);
+        icon.addFile(QStringLiteral(":/icones/icones/gestionBDD.png"), QSize(), QIcon::Normal, QIcon::Off);
         DialogLogin->setWindowIcon(icon);
         verticalLayout = new QVBoxLayout(DialogLogin);
-        verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
+        verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
         formLayout = new QFormLayout();
-        formLayout->setObjectName(QString::fromUtf8("formLayout"));
+        formLayout->setObjectName(QStringLiteral("formLayout"));
         labelLogin = new QLabel(DialogLogin);
-        labelLogin->setObjectName(QString::fromUtf8("labelLogin"));
+        labelLogin->setObjectName(QStringLiteral("labelLogin"));
 
         formLayout->setWidget(0, QFormLayout::LabelRole, labelLogin);
 
         lineEditLogin = new QLineEdit(DialogLogin);
-        lineEditLogin->setObjectName(QString::fromUtf8("lineEditLogin"));
+        lineEditLogin->setObjectName(QStringLiteral("lineEditLogin"));
 
         formLayout->setWidget(0, QFormLayout::FieldRole, lineEditLogin);
 
         labelPassword = new QLabel(DialogLogin);
-        labelPassword->setObjectName(QString::fromUtf8("labelPassword"));
+        labelPassword->setObjectName(QStringLiteral("labelPassword"));
 
         formLayout->setWidget(1, QFormLayout::LabelRole, labelPassword);
 
         lineEditPassword = new QLineEdit(DialogLogin);
-        lineEditPassword->setObjectName(QString::fromUtf8("lineEditPassword"));
+        lineEditPassword->setObjectName(QStringLiteral("lineEditPassword"));
         lineEditPassword->setEnabled(true);
         lineEditPassword->setEchoMode(QLineEdit::Password);
 
         formLayout->setWidget(1, QFormLayout::FieldRole, lineEditPassword);
 
         labelServeur = new QLabel(DialogLogin);
-        labelServeur->setObjectName(QString::fromUtf8("labelServeur"));
+        labelServeur->setObjectName(QStringLiteral("labelServeur"));
 
         formLayout->setWidget(2, QFormLayout::LabelRole, labelServeur);
 
         lineEditServeur = new QLineEdit(DialogLogin);
-        lineEditServeur->setObjectName(QString::fromUtf8("lineEditServeur"));
+        lineEditServeur->setObjectName(QStringLiteral("lineEditServeur"));
 
         formLayout->setWidget(2, QFormLayout::FieldRole, lineEditServeur);
 
-
-        verticalLayout->addLayout(formLayout);
-
         horizontalLayout = new QHBoxLayout();
-        horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
+        horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
         pushButtonConnexion = new QPushButton(DialogLogin);
-        pushButtonConnexion->setObjectName(QString::fromUtf8("pushButtonConnexion"));
+        pushButtonConnexion->setObjectName(QStringLiteral("pushButtonConnexion"));
         pushButtonConnexion->setEnabled(false);
 
         horizontalLayout->addWidget(pushButtonConnexion);
 
         pushButtonCancel = new QPushButton(DialogLogin);
-        pushButtonCancel->setObjectName(QString::fromUtf8("pushButtonCancel"));
+        pushButtonCancel->setObjectName(QStringLiteral("pushButtonCancel"));
 
         horizontalLayout->addWidget(pushButtonCancel);
 
 
-        verticalLayout->addLayout(horizontalLayout);
+        formLayout->setLayout(3, QFormLayout::SpanningRole, horizontalLayout);
+
+
+        verticalLayout->addLayout(formLayout);
 
         QWidget::setTabOrder(lineEditLogin, lineEditPassword);
         QWidget::setTabOrder(lineEditPassword, pushButtonConnexion);
@@ -113,12 +113,13 @@ public:
 
     void retranslateUi(QDialog *DialogLogin)
     {
-        DialogLogin->setWindowTitle(QApplication::translate("DialogLogin", "Connection", 0, QApplication::UnicodeUTF8));
-        labelLogin->setText(QApplication::translate("DialogLogin", "Login: ", 0, QApplication::UnicodeUTF8));
-        labelPassword->setText(QApplication::translate("DialogLogin", "Password:", 0, QApplication::UnicodeUTF8));
-        labelServeur->setText(QApplication::translate("DialogLogin", "Server:", 0, QApplication::UnicodeUTF8));
-        pushButtonConnexion->setText(QApplication::translate("DialogLogin", "&Login", 0, QApplication::UnicodeUTF8));
-        pushButtonCancel->setText(QApplication::translate("DialogLogin", "&Cancel", 0, QApplication::UnicodeUTF8));
+        DialogLogin->setWindowTitle(QApplication::translate("DialogLogin", "Connection", 0));
+        labelLogin->setText(QApplication::translate("DialogLogin", "Login: ", 0));
+        labelPassword->setText(QApplication::translate("DialogLogin", "Password:", 0));
+        labelServeur->setText(QApplication::translate("DialogLogin", "Server:", 0));
+        lineEditServeur->setText(QApplication::translate("DialogLogin", "localhost", 0));
+        pushButtonConnexion->setText(QApplication::translate("DialogLogin", "&Login", 0));
+        pushButtonCancel->setText(QApplication::translate("DialogLogin", "&Cancel", 0));
     } // retranslateUi
 
 };

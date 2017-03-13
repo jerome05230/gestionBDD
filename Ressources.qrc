@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/images"/>
+    <qresource prefix="/icones">
+        <file>icones/gestionBDD.png</file>
+    </qresource>
+    <qresource prefix="/polices"/>
+</RCC>

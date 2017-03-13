@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="fr_FR">
+<TS version="2.0" language="it_IT">
 <context>
     <name>DialogAbout</name>
     <message>
@@ -11,7 +11,7 @@
     <message>
         <location filename="dialogabout.ui" line="37"/>
         <source>Licence</source>
-        <translation>License</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message utf8="true">
         <location filename="dialogabout.ui" line="43"/>
@@ -29,18 +29,18 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="dialogabout.ui" line="62"/>
         <source>Author</source>
-        <translation>Auteur</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message utf8="true">
         <location filename="dialogabout.ui" line="74"/>
         <source>Author: Jérôme Baron-Campos</source>
-        <translation>Auteur: Jérôme Baron-Campos</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="dialogabout.ui" line="84"/>
         <source>Mail: jerome.baroncampos@gmail.com</source>
         <oldsource>Mail: gthomassingap@gmail.com</oldsource>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message utf8="true">
         <location filename="dialogabout.ui" line="91"/>
@@ -73,7 +73,7 @@ p, li { white-space: pre-wrap; }
     <message utf8="true">
         <location filename="dialogabout.ui" line="136"/>
         <source>Copyright @ Jérôme Baron-Campos 2017</source>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -82,29 +82,29 @@ p, li { white-space: pre-wrap; }
         <location filename="dialoglogin.ui" line="24"/>
         <source>Password:</source>
         <oldsource>Password</oldsource>
-        <translation>Mot de Passe:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="dialoglogin.ui" line="14"/>
         <source>Connection</source>
         <oldsource>Connexion</oldsource>
-        <translation>Connexion</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="dialoglogin.ui" line="46"/>
         <source>&amp;Login</source>
-        <translation>&amp;Connexion</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="dialoglogin.ui" line="53"/>
         <source>&amp;Cancel</source>
         <oldsource>Cancel</oldsource>
-        <translation>&amp;Annuler</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="dialoglogin.ui" line="65"/>
         <source>Login: </source>
-        <translation>Identifiant:</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -112,114 +112,110 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="mainwindow.ui" line="14"/>
         <source>gestionBDD</source>
-        <translation>gestionBDD</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="mainwindow.ui" line="42"/>
         <source>DataBases</source>
-        <translation>Base de données</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="mainwindow.ui" line="84"/>
         <source>Tables</source>
-        <translation>Tables</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="mainwindow.ui" line="98"/>
         <source>Fields</source>
-        <translation>Champs</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="mainwindow.ui" line="239"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/icones/icones/gestionBDD.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="mainwindow.ui" line="250"/>
         <source>Historical</source>
-        <translation>Historique</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="mainwindow.ui" line="259"/>
         <source>&amp;Open</source>
         <oldsource>Open</oldsource>
-        <translation>&amp;Ouvrir</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="mainwindow.ui" line="266"/>
         <source>&amp;Save</source>
         <oldsource>Save</oldsource>
-        <translation>&amp;Sauvegarder</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="mainwindow.ui" line="280"/>
         <source>&amp;Clean</source>
         <oldsource>Clean</oldsource>
-        <translation>&amp;Nettoyer</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="mainwindow.ui" line="287"/>
         <source>&amp;Delete</source>
         <oldsource>Delete</oldsource>
-        <translation>&amp;Retirer</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="mainwindow.ui" line="329"/>
         <source>Files</source>
-        <translation>Fichier</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="mainwindow.ui" line="339"/>
         <source>Leave</source>
-        <translation>Quitter</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="mainwindow.ui" line="344"/>
         <source>About</source>
-        <translation>A propos</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="mainwindow.ui" line="120"/>
         <source>Entering the request:</source>
         <oldsource>Entering the request</oldsource>
-        <translation>Entrez une requète:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="mainwindow.ui" line="148"/>
         <source>&amp;History</source>
-        <translation>&amp;Historiser</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="mainwindow.ui" line="158"/>
         <source>&amp;?</source>
         <oldsource>?</oldsource>
-        <translation>&amp;?</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="mainwindow.ui" line="167"/>
         <source>Result</source>
-        <translation>Resultat</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="mainwindow.ui" line="196"/>
         <source>&amp;Export</source>
         <oldsource>Export</oldsource>
-        <translation>&amp;Exporter</translation>
-    </message>
-    <message>
-        <source>GestionBDD</source>
-        <translation type="obsolete">GestionBDD</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="mainwindow.cpp" line="156"/>
         <location filename="mainwindow.cpp" line="199"/>
         <source>Save File</source>
-        <translation>Fichier à Sauvegarder</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="mainwindow.cpp" line="170"/>
         <source>Open File</source>
-        <translation>Fichier à ouvrir</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

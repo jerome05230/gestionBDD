@@ -22,8 +22,6 @@ private slots:
     void on_lineEditLogin_textChanged();
     void on_lineEditPassword_textChanged();
     void on_pushButtonConnexion_clicked();
-
-
     void on_pushButtonCancel_clicked();
 
 private:

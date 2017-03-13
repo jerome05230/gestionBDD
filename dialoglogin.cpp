@@ -19,8 +19,6 @@ DialogLogin::~DialogLogin()
 void DialogLogin::activatedConnexionButton(){
     ui->pushButtonConnexion->setEnabled(ui->lineEditLogin->text()!=""&& ui->lineEditPassword->text()!="");
 }
-
-
 void DialogLogin::on_lineEditLogin_textChanged()
 {
     activatedConnexionButton();
@@ -34,8 +32,9 @@ void DialogLogin::on_pushButtonConnexion_clicked()
 {
     QString login=ui->lineEditLogin->text();
     QString password=ui->lineEditPassword->text();
+    QString serveur=ui->lineEditServeur->text();
     QSqlDatabase dataBase=QSqlDatabase::database();
-    dataBase.setHostName("localhost");
+    dataBase.setHostName(serveur);
     dataBase.setUserName(login);
     dataBase.setPassword(password);
     if(dataBase.open())

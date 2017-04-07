@@ -16,15 +16,20 @@ MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
 {
+    qDebug() << "MainWindow::MainWindow(QWidget *parent)";
     ui->setupUi(this);
     chargerBDD();
 }
 
 MainWindow::~MainWindow()
 {
+    qDebug() << "~MainWindow()";
     delete ui;
 }
-void MainWindow::chargerBDD(){
+
+void MainWindow::chargerBDD()
+{
+    qDebug() << "void MainWindow::chargerBDD()";
     QSqlQuery reqChargeBDD("show databases;");
     while (reqChargeBDD.next())
     {
@@ -33,11 +38,11 @@ void MainWindow::chargerBDD(){
     }
 }
 
-
 void MainWindow::on_comboBoxBase_currentIndexChanged(const QString arg1)
 {
-    ui->listWidgetChamps->clear();
-    ui->listWidgetTables->clear();
+   qDebug() << "void MainWindow::on_comboBoxBase_currentIndexChanged(const QString arg1)"; 
+   ui->listWidgetChamps->clear();
+   ui->listWidgetTables->clear();
    QSqlDatabase dataBase=QSqlDatabase::database();
    dataBase.setDatabaseName(arg1);
    dataBase.close();
@@ -52,8 +57,10 @@ void MainWindow::on_comboBoxBase_currentIndexChanged(const QString arg1)
     }
 }
 
+
 void MainWindow::on_listWidgetTables_currentRowChanged()
 {
+    qDebug() << "void MainWindow::on_listWidgetTables_currentRowChanged()";
     if(ui->listWidgetTables->currentItem())
     {
         QString nomTable=ui->listWidgetTables->currentItem()->text();
@@ -69,6 +76,7 @@ void MainWindow::on_listWidgetTables_currentRowChanged()
 
 void MainWindow::on_textEditRequete_textChanged()
 {
+    qDebug() << "void MainWindow::on_textEditRequete_textChanged()";
     QString reqText=ui->textEditRequete->toPlainText();
     QSqlQuery reqSaisie(reqText);
     if (reqSaisie.exec())
@@ -123,6 +131,7 @@ void MainWindow::on_textEditRequete_textChanged()
 
 void MainWindow::on_pushButtonError_clicked()
 {
+    qDebug() << "void MainWindow::on_pushButtonError_clicked()";
     QString reqText=ui->textEditRequete->toPlainText();
     QSqlQuery reqSaisie(reqText);
     QString error= reqSaisie.lastError().text();
@@ -132,27 +141,32 @@ void MainWindow::on_pushButtonError_clicked()
 
 void MainWindow::on_pushButtonEnregistrer_clicked()
 {
+    qDebug() << "void MainWindow::on_pushButtonEnregistrer_clicked()"; 
     ui->listWidgetHistorique->addItem(ui->textEditRequete->toPlainText());
     ui->pushButtonEnregistrer->setEnabled(false);
 }
 
 void MainWindow::on_listWidgetHistorique_itemClicked()
 {
+    qDebug() << "void MainWindow::on_listWidgetHistorique_itemClicked()";
     ui->textEditRequete->setText(ui->listWidgetHistorique->currentItem()->text());
 }
 
 void MainWindow::on_pushButtonClear_clicked()
 {
+    Debug() << "void MainWindow::on_pushButtonClear_clicked()";
     ui->listWidgetHistorique->clear();
 }
 
 void MainWindow::on_pushButtonSupprimer_clicked()
 {
+   qDebug() << "void MainWindow::on_pushButtonSupprimer_clicked()";
    delete ui->listWidgetHistorique->currentItem();
 }
 
 void MainWindow::on_pushButtonSauvegarder_clicked()
 {
+    qDebug() << "void MainWindow::on_pushButtonSauvegarder_clicked()";
     QString fichier = QFileDialog::getSaveFileName(this,tr("Save File"), "/home", ".sql");
     QFile file(fichier);
          if (!file.open(QIODevice::WriteOnly | QIODevice::Text))
@@ -167,6 +181,7 @@ void MainWindow::on_pushButtonSauvegarder_clicked()
 
 void MainWindow::on_pushButtonOuvrir_clicked()
 {
+    qDebug() << "void MainWindow::on_pushButtonOuvrir_clicked()";
     QString fichier = QFileDialog::getOpenFileName(this,tr("Open File"), "/home", "*.sql");
     QFile file(fichier);
          if (!file.open(QIODevice::ReadOnly | QIODevice::Text))
@@ -184,6 +199,7 @@ void MainWindow::on_pushButtonOuvrir_clicked()
 
 void MainWindow::on_actionLeave_triggered()
 {
+    qDebug() << "void MainWindow::on_actionLeave_triggered()";
     QMessageBox msgBox;
     msgBox.setInformativeText("Voulez-vous vraiment quitter");
     msgBox.setStandardButtons(QMessageBox::Yes | QMessageBox::No);
@@ -196,6 +212,7 @@ void MainWindow::on_actionLeave_triggered()
 
 void MainWindow::on_pushButtonExporter_clicked()
 {
+    qDebug() << "void MainWindow::on_pushButtonExporter_clicked()";
     QString fichier = QFileDialog::getSaveFileName(this,tr("Save File"), "/home", ".csv");
     QFile file(fichier);
          if (!file.open(QIODevice::WriteOnly | QIODevice::Text))
@@ -213,6 +230,7 @@ void MainWindow::on_pushButtonExporter_clicked()
 
 void MainWindow::on_actionAbout_triggered()
 {
+    qDebug() << "void MainWindow::on_actionAbout_triggered()";
     DialogAbout dialAbout;
     dialAbout.exec();
 }
